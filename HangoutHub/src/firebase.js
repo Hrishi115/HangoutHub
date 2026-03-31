@@ -8,13 +8,13 @@ import { getFirestore } from "firebase/firestore";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyCqrvOdI8ziiMsM9kZiidsJ000I3lwmRew",
-  authDomain: "hangout-hub-39188.firebaseapp.com",
-  projectId: "hangout-hub-39188",
-  storageBucket: "hangout-hub-39188.firebasestorage.app",
-  messagingSenderId: "496866777067",
-  appId: "1:496866777067:web:e6f6f1d9df93a03545ebae",
-  measurementId: "G-50ZQ6BDWJ4"
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID,
+  measurementId: import.meta.env.VITE_MEASUREMENT_ID
 };
 
 // Initialize Firebase
