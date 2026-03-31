@@ -1,0 +1,35 @@
+.card {
+  background: #1a1a1a;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.3s;
+  cursor: pointer;
+  color: white;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.data-display {
+  padding: 12px;
+}
+
+.card h3 {
+  margin-bottom: 5px;
+}
+
+.card button {
+  margin-top: 8px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 8px;
+  background: #ff7992;
+  color: white;
+}

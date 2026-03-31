@@ -1,0 +1,117 @@
+const placesData = [
+  {
+    id: 1,
+    name: "Marine Drive Sunset",
+    type: "Outdoor",
+    location: "Marine Drive, Mumbai",
+    rating: 4.8,
+    reviews: 1243,
+    price: "Free",
+    vibe: ["Chill", "Scenic", "Romantic"],
+    image: "https://images.unsplash.com/photo-1570168007204-dfb528c6958f",
+    description: "Perfect spot to relax with friends and watch the sunset.",
+    distance: "3.2 km",
+    likes: 10
+  },
+  {
+    id: 2,
+    name: "Leopold Cafe",
+    type: "Cafe",
+    location: "Colaba, Mumbai",
+    rating: 4.5,
+    reviews: 980,
+    price: "₹800 for two",
+    vibe: ["Lively", "Historic", "Foodie"],
+    image: "https://images.unsplash.com/photo-1552566626-52f8b828add9",
+    description: "Iconic cafe with great food and a buzzing vibe.",
+    distance: "4.1 km",
+    likes: 10
+  },
+  {
+    id: 3,
+    name: "Juhu Beach Hangout",
+    type: "Beach",
+    location: "Juhu, Mumbai",
+    rating: 4.6,
+    reviews: 2100,
+    price: "Free",
+    vibe: ["Fun", "Street Food", "Sunset"],
+    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+    description: "Street food + beach = perfect evening plan.",
+    distance: "8.5 km",
+    likes: 10
+  },
+  {
+    id: 4,
+    name: "Game Palacio",
+    type: "Arcade",
+    location: "Lower Parel, Mumbai",
+    rating: 4.7,
+    reviews: 670,
+    price: "₹1500 for two",
+    vibe: ["Gaming", "Luxury", "Nightlife"],
+    image: "https://images.unsplash.com/photo-1511512578047-dfb367046420",
+    description: "Bowling, arcade, and great food in one place.",
+    distance: "5.6 km",
+    likes: 10
+  },
+  {
+    id: 5,
+    name: "Carter Road Walk",
+    type: "Outdoor",
+    location: "Bandra, Mumbai",
+    rating: 4.7,
+    reviews: 890,
+    price: "Free",
+    vibe: ["Chill", "Couple", "Evening Walk"],
+    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+    description: "Relaxing seaside walk with cafes nearby.",
+    distance: "6.8 km",
+    likes: 10
+  },
+  {
+    id: 6,
+    name: "PVR Luxe Cinema",
+    type: "Cinema",
+    location: "Phoenix Mall, Mumbai",
+    rating: 4.6,
+    reviews: 540,
+    price: "₹1200 per person",
+    vibe: ["Luxury", "Movies", "Comfort"],
+    image: "https://images.unsplash.com/photo-1524985069026-dd778a71c7b4",
+    description: "Watch movies in ultimate comfort with recliner seats.",
+    distance: "5.2 km",
+    likes: 10
+  },
+  {
+    id: 7,
+    name: "Smaaash Gaming Zone",
+    type: "Gaming",
+    location: "Lower Parel, Mumbai",
+    rating: 4.4,
+    reviews: 720,
+    price: "₹1000 for two",
+    vibe: ["Arcade", "Fun", "Group"],
+    image: "https://images.unsplash.com/photo-1606813907291-d86efa9b94db",
+    description: "Perfect place for competitive fun with friends.",
+    distance: "5.9 km",
+    likes: 10
+  },
+  {
+    id: 8,
+    name: "Versova Cafe Scene",
+    type: "Cafe",
+    location: "Versova, Mumbai",
+    rating: 4.5,
+    reviews: 410,
+    price: "₹700 for two",
+    vibe: ["Cozy", "Aesthetic", "Chill"],
+    image: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb",
+    description: "Cute cafes with aesthetic interiors and great coffee.",
+    distance: "9.1 km",
+    likes: 10
+  }
+  
+]
+
+export default placesData;
