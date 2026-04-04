@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import placesData from '../data/placesData';
+// import placesData from '../data/placesData';
 import PlaceCard from '../components/PlaceCard';
 import './Home.css'
 import { db } from '../firebase';
@@ -20,7 +20,7 @@ function SearchBar({ search, setSearch }) {
 } 
 
 function Home() {
-    const [places, setPlaces] = useState(placesData);
+    const [places, setPlaces] = useState([]);
 
     useEffect(() => {
         const fetchPlaces = async () => {

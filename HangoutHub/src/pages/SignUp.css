@@ -1,0 +1,209 @@
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 20px;
+  background: radial-gradient(circle at center, #2a0b4d, #09090b);
+  color: white;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.auth-glass-box {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 40px;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: smoothAppear 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes smoothAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.auth-glass-box h2 {
+  font-family: 'Inter', 'Roboto', sans-serif;
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  text-align: center;
+  background: linear-gradient(135deg, #00f2fe, #4facfe, #e52e71);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.auth-glass-box p.subtitle {
+  text-align: center;
+  color: #a3a3a3;
+  margin-top: -12px;
+  margin-bottom: 24px;
+  font-size: 0.95rem;
+}
+
+.tabs-container {
+  display: flex;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  padding: 4px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.tab-button {
+  flex: 1;
+  background: transparent;
+  color: #888;
+  border: none;
+  padding: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.tab-button.active {
+  color: white;
+  text-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+.tab-slider {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  width: calc(50% - 4px);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  z-index: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.tab-slider.login {
+  transform: translateX(0);
+}
+
+.tab-slider.signup {
+  transform: translateX(calc(100% + 0px));
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #d1d1d1;
+  margin-left: 4px;
+}
+
+.auth-input {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 14px 16px;
+  border-radius: 12px;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.auth-input::placeholder {
+  color: #555;
+}
+
+.auth-input:focus {
+  border-color: #4facfe;
+  box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.2);
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.auth-button {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: #0b0b0b;
+  border: none;
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 20px rgba(79, 172, 254, 0.3);
+}
+
+.auth-button.signup-mode {
+  background: linear-gradient(135deg, #e52e71, #ff8a00);
+  color: white;
+  box-shadow: 0 6px 20px rgba(229, 46, 113, 0.3);
+}
+
+.auth-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(79, 172, 254, 0.4);
+}
+.auth-button.signup-mode:hover {
+  box-shadow: 0 8px 25px rgba(229, 46, 113, 0.4);
+}
+
+.auth-button:active {
+  transform: translateY(0);
+}
+
+.auth-button:disabled {
+  background: #333;
+  color: #777;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.error-message {
+  color: #ff4a4a;
+  background: rgba(255, 74, 74, 0.1);
+  border-left: 4px solid #ff4a4a;
+  padding: 12px 14px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+  animation: shake 0.4s ease-in-out;
+}
+
+.success-message {
+  color: #4aff80;
+  background: rgba(74, 255, 128, 0.1);
+  border-left: 4px solid #4aff80;
+  padding: 12px 14px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+}

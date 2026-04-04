@@ -1,41 +1,36 @@
 import { useState } from 'react'
+import { Routes, Route, Link, useNavigate } from 'react-router-dom'
 import bannerImg from './assets/banner1.png'
 import './App.css'
 import Home from './pages/Home'
+import Explore from './pages/Explore'
+import Feed from './pages/Feed'
+import SignUp from './pages/SignUp'
 import Footer from './components/Footer'
 
 
-function Navbar(){
+function Navbar() {
+  const navigate = useNavigate();
   return (
     <nav className='navbar'>
-      <h1>HangoutHub</h1>
+      <h1 onClick={() => navigate('/')} style={{cursor: 'pointer'}}>HangoutHub</h1>
       <div className="nav-buttons-container">
-        <button className="nav-buttons">Home</button>
-        <button className="nav-buttons">Chats</button>
-        <button className="nav-buttons">Feed</button>
-        <button className="nav-buttons">Profile</button>
+        <Link to="/"><button className="nav-buttons">Home</button></Link>
+        <Link to="/explore"><button className="nav-buttons">Explore</button></Link>
+        <Link to="/feed"><button className="nav-buttons">Feed</button></Link>
+        <Link to="/signup"><button className="nav-buttons">SignUp</button></Link>
       </div>
     </nav>
   )
 }
 
-function Banner(){
+function Banner() {
   return (
     <div className='banner'>
-      <img src={bannerImg} alt="Hero Image" className='hero-image' width="50%"  />
+      <img src={bannerImg} alt="Hero Image" className='hero-image' width="50%" />
     </div>
   )
 }
-
-// function Footer() {
-//   return (
-//     <footer className="footer">
-//       <p> 2024 HangoutHub | All rights reserved.</p>
-//       <p>Customer Support | 1122334455</p>
-//       <p>English</p>
-//     </footer>
-//   )
-// }
 
 function App() {
 
@@ -43,7 +38,14 @@ function App() {
     <div>
       <Navbar />
       {/* <Banner /> */}
-      <Home />
+      <div className="main-content" style={{minHeight: '80vh', padding: '20px'}}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/explore" element={<Explore />} />
+          <Route path="/feed" element={<Feed />} />
+          <Route path="/signup" element={<SignUp />} />
+        </Routes>
+      </div>
       <Footer />
     </div>
   )
